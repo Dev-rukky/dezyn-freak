@@ -63,6 +63,54 @@ nav {
     color: var(--black);
 }
 
+.banner {
+    background-image: url(/assets/images/BG-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 160vh;
+    padding-top: 10rem;
+}
+
+.banner-heading {
+    max-width: 870px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner-heading h1 {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 112%;
+}
+
+.banner-heading p {
+    color: var(--white);
+    text-align: center;
+    font-family: var(--main-font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 112%;
+    padding-top: 21px;
+}
+
+.banner-heading img {
+    padding-top: 69px;
+}
+
+
+
+
+
+
+
 
 
 
@@ -114,11 +162,16 @@ nav {
     .nav-link {
         color: var(--main-color);
     }
+
+    .nav-link-active {
+        color: var(--black);
+    }
 }
 
 @media only screen and (max-width: 1024px) {
     nav {
         justify-content: space-between;
         gap: 0;
+        padding: 1rem 2rem;
     }
 }
