@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --main-color: #0094e7;
@@ -6,6 +6,7 @@
     --white: #fff;
     --nav-font-family: 'Poppins', sans-serif;
     --main-font-family: 'Montserrat', sans-serif;
+    --btn-font-family: 'Inter', sans-serif;
 }
 
 * {
@@ -126,6 +127,8 @@ nav {
     column-gap: 150px;
     row-gap: 50px;
     transform: translate(0px, -50%);
+    position: relative;
+    z-index: 501;
 }
 
 .ct-card h2 {
@@ -165,6 +168,101 @@ nav {
     background: #0094E7;
     padding: 16px;
 }
+
+.profile {
+    font-family: var(--main-font-family);
+    position: relative;
+}
+
+.profile-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* column-gap: 150px; */
+    padding: 16px;
+}
+
+.pro-pic {
+    width: 328px;
+    height: 338px;
+    background: #D9D9D9;
+    position: relative;
+    /* border-bottom: 19px solid var(--main-color); */
+}
+
+.pro-pic::before {
+    content: '';
+    position: absolute;
+    bottom: -35px;
+    left: 0px;
+    width: calc(100% - 0px);
+    height: 19px;
+    background-color: var(--main-color);
+}
+
+.profile-content h1 {
+    color: #000;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 112%;
+}
+
+.profile-content p {
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 135%;
+    padding-top: 31px;
+    padding-bottom: 16px;
+    /* max-width: 832px; */
+}
+
+.profile-link {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 16px;
+}
+
+.profile-link button {
+    width: 220px;
+    height: 57px;
+    border-radius: 44px;
+    background-color: var(--main-color);
+    color: #FFF;
+    border: none;
+    font-family: var(--btn-font-family);
+    font-size: 20px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 11px;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* .profile-link a {
+    padding: 14px 36px;
+    border-radius: 44px;
+    background-color: var(--main-color);
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 11px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} */
+
+.ellipse {
+    position: absolute;
+    bottom: -9px;
+    left: 78%;
+    z-index: 500;
+}
+
+
+
+
 
 
 
@@ -224,6 +322,10 @@ nav {
     .nav-link-active {
         color: var(--black);
     }
+
+    .ellipse {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -231,6 +333,19 @@ nav {
         justify-content: space-between;
         gap: 0;
         padding: 1rem 2rem;
+    }
+
+    .profile-content {
+        text-align: center;
+    }
+
+    .profile-link {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-content h1 {
+        padding-top: 60px;
     }
 }
 
@@ -255,6 +370,23 @@ nav {
         transform: translate(0px, -25%);
         background: linear-gradient(131deg, #0094E7 0%, #FFF 100%);
     }
+
+    .profile-content h1 {
+        font-size: clamp(5vw, min(15.5em), 8vw);
+    }
+
+    .profile-content p {
+        font-size: 16px;
+    }
+
+    .profile-link a {
+        font-size: 14px;
+        padding: 7px 16px;
+    }
+
+    .profile-link img {
+        width: 24px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -263,10 +395,15 @@ nav {
     }
 
     .ct-card h2 {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .ct-card p {
         font-size: 12px;
+    }
+
+    .profile-link {
+        flex-direction: column;
+        row-gap: 16px;
     }
 }
