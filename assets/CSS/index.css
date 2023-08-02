@@ -228,7 +228,7 @@ nav {
     height: 57px;
     border-radius: 44px;
     background-color: var(--main-color);
-    color: #FFF;
+    color: var(--white);
     border: none;
     font-family: var(--btn-font-family);
     font-size: 20px;
@@ -274,12 +274,14 @@ nav {
     flex-direction: column;
     row-gap: 15px;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .sevice-text h1 {
     font-size: 48px;
     font-weight: 700;
     line-height: 112%;
+    padding-bottom: 1rem;
 }
 
 .sevice-text p {
@@ -288,8 +290,46 @@ nav {
     line-height: 112%;
 }
 
+.service-card1 {
+    background-color: var(--black);
+    color: var(--white);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
 
+.service-card2 {
+    background-color: var(--main-color);
+}
 
+.service-card-title h5 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 112%;
+    padding-bottom: 12px; 
+}
+
+.service-card-title p {
+font-size: 20px;
+font-weight: 500;
+line-height: 112%; 
+}
+
+.service-img {
+    display: flex;
+    column-gap: 16px;
+}
+
+.service-card-con {
+    display: flex;
+    column-gap: 80px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    max-width: 1080px;
+}
 
 
 
